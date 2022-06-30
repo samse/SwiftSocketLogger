@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogTableViewCell" rowHeight="105" id="imA-Ic-Kqg" customClass="LogTableViewCell" customModule="SocketLogger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="532" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="imA-Ic-Kqg" id="ayX-Ib-Ot8">
+                <rect key="frame" x="0.0" y="0.0" width="532" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-H3-8rA">
+                        <rect key="frame" x="10" y="0.0" width="512" height="100"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="QQo-H3-8rA" secondAttribute="bottom" constant="5" id="OXW-l6-Nil"/>
+                    <constraint firstItem="QQo-H3-8rA" firstAttribute="top" secondItem="ayX-Ib-Ot8" secondAttribute="top" id="weZ-AY-ld7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QQo-H3-8rA" secondAttribute="trailing" constant="10" id="psi-qu-CDs"/>
+                <constraint firstItem="QQo-H3-8rA" firstAttribute="leading" secondItem="imA-Ic-Kqg" secondAttribute="leading" constant="10" id="sk8-cd-6fG"/>
+            </constraints>
+            <connections>
+                <outlet property="logText" destination="QQo-H3-8rA" id="KSZ-Lh-xVq"/>
+            </connections>
+            <point key="canvasLocation" x="462.31884057971018" y="65.290178571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

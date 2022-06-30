@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocketLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Lc-pS-Nio">
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cub-Ny-Tqf">
+                                        <rect key="frame" x="159" y="6" width="160" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="IPu-AM-Q5B"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="filterEditChangedAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="aid-5v-iWk"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6d-0G-gu0">
+                                        <rect key="frame" x="324" y="4.5" width="80" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Vma-c7-wH3"/>
+                                            <constraint firstAttribute="width" constant="80" id="fcc-l2-q5v"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="INFO"/>
+                                        <connections>
+                                            <action selector="logLevelButtonTouchedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKu-To-jbC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="n6d-0G-gu0" firstAttribute="centerY" secondItem="8Lc-pS-Nio" secondAttribute="centerY" id="7cV-EV-4RM"/>
+                                    <constraint firstItem="Cub-Ny-Tqf" firstAttribute="top" secondItem="8Lc-pS-Nio" secondAttribute="top" constant="6" id="B0q-GF-ept"/>
+                                    <constraint firstAttribute="trailing" secondItem="n6d-0G-gu0" secondAttribute="trailing" constant="10" id="Hlt-CM-Cco"/>
+                                    <constraint firstAttribute="height" constant="40" id="WfH-PG-L0h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cub-Ny-Tqf" secondAttribute="bottom" constant="6" id="feF-20-Eek"/>
+                                    <constraint firstItem="n6d-0G-gu0" firstAttribute="leading" secondItem="Cub-Ny-Tqf" secondAttribute="trailing" constant="5" id="yHl-dk-ZAL"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Sf0-Sg-6zW">
+                                <rect key="frame" x="0.0" y="84" width="414" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LogTableViewCell" rowHeight="129" id="NOd-q1-H6w" customClass="LogTableViewCell" customModule="SocketLogger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="129"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NOd-q1-H6w" id="Kxo-Kt-Mgp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoM-Ha-dYU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="qm5-as-hhA"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Otg-XM-RgC">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqk-IE-13L">
+                                                    <rect key="frame" x="0.0" y="128" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="ZOb-6d-C6K"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Otg-XM-RgC" firstAttribute="bottom" secondItem="qqk-IE-13L" secondAttribute="bottom" id="0t7-nV-z0g"/>
+                                                <constraint firstItem="qqk-IE-13L" firstAttribute="leading" secondItem="Kxo-Kt-Mgp" secondAttribute="leading" id="0zl-jm-iHi"/>
+                                                <constraint firstItem="DoM-Ha-dYU" firstAttribute="top" secondItem="Kxo-Kt-Mgp" secondAttribute="top" id="QsI-nL-C3l"/>
+                                                <constraint firstItem="Otg-XM-RgC" firstAttribute="trailing" secondItem="qqk-IE-13L" secondAttribute="trailing" id="XTQ-Qd-iaG"/>
+                                                <constraint firstAttribute="bottom" secondItem="qqk-IE-13L" secondAttribute="bottom" id="Z5h-fD-4zh"/>
+                                                <constraint firstAttribute="trailing" secondItem="qqk-IE-13L" secondAttribute="trailing" id="i3l-SK-E1r"/>
+                                                <constraint firstAttribute="trailing" secondItem="DoM-Ha-dYU" secondAttribute="trailing" id="i61-p4-6oz"/>
+                                                <constraint firstItem="Otg-XM-RgC" firstAttribute="top" secondItem="DoM-Ha-dYU" secondAttribute="top" id="qXf-qc-GRl"/>
+                                                <constraint firstItem="Otg-XM-RgC" firstAttribute="leading" secondItem="qqk-IE-13L" secondAttribute="leading" id="xoI-Ev-MHP"/>
+                                                <constraint firstItem="DoM-Ha-dYU" firstAttribute="leading" secondItem="Kxo-Kt-Mgp" secondAttribute="leading" id="yVr-6j-eIl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="logText" destination="Otg-XM-RgC" id="UbY-Dz-yOD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mKL-Dt-GJ1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eN2-6H-yZ5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sf0-Sg-6zW" secondAttribute="trailing" id="7XP-lw-QJ2"/>
+                            <constraint firstItem="Sf0-Sg-6zW" firstAttribute="top" secondItem="8Lc-pS-Nio" secondAttribute="bottom" id="Duj-qK-YMt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sf0-Sg-6zW" secondAttribute="bottom" id="Ke8-tc-56d"/>
+                            <constraint firstItem="8Lc-pS-Nio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L2y-Y4-IN1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Lc-pS-Nio" secondAttribute="trailing" id="RRq-SS-tkO"/>
+                            <constraint firstItem="Sf0-Sg-6zW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jzJ-XH-yGb"/>
+                            <constraint firstItem="8Lc-pS-Nio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zwx-Mx-KpE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filterEditView" destination="Cub-Ny-Tqf" id="TNa-Fj-cAk"/>
+                        <outlet property="logTableView" destination="Sf0-Sg-6zW" id="YQ9-cZ-R3C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
