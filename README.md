@@ -1,6 +1,7 @@
 # SwiftSocketLogger
 This is socket logger for ios written with Swift.
-It's run in background. and receive log from other client.
+
+It's run on background app in audio playing mode and receive log from other client app.
 
 Client program can send a log using below code.
 - Prerequisists : include all files to your project in swiftsocket directory of this Project.
