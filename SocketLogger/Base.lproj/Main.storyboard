@@ -110,6 +110,72 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eN2-6H-yZ5"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT6-74-pZq">
+                                <rect key="frame" x="314" y="84" width="100" height="124"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXh-ew-8c6">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="UGF-f9-ao9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="INFO"/>
+                                        <connections>
+                                            <action selector="levelComboSelectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STv-bd-xpL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-oA-X71">
+                                        <rect key="frame" x="0.0" y="31" width="100" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Crq-d5-qjf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="WARNING"/>
+                                        <connections>
+                                            <action selector="levelComboSelectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6T-zO-YFu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWi-ID-E50">
+                                        <rect key="frame" x="0.0" y="62" width="100" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="UnY-za-Ihl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="DEBUG"/>
+                                        <connections>
+                                            <action selector="levelComboSelectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3N-en-Adf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfe-av-TuM">
+                                        <rect key="frame" x="0.0" y="93" width="100" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="g0R-vh-xMs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ERROR"/>
+                                        <connections>
+                                            <action selector="levelComboSelectAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyr-OR-DAb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VWi-ID-E50" secondAttribute="trailing" id="1Af-9x-Z6j"/>
+                                    <constraint firstItem="gY2-oA-X71" firstAttribute="top" secondItem="LXh-ew-8c6" secondAttribute="bottom" id="2h3-ef-pOD"/>
+                                    <constraint firstItem="VWi-ID-E50" firstAttribute="leading" secondItem="MT6-74-pZq" secondAttribute="leading" id="8b4-eo-xk1"/>
+                                    <constraint firstAttribute="width" constant="100" id="8yV-Bb-k59"/>
+                                    <constraint firstItem="Yfe-av-TuM" firstAttribute="leading" secondItem="MT6-74-pZq" secondAttribute="leading" id="Abb-ob-7UZ"/>
+                                    <constraint firstAttribute="height" constant="124" id="EKh-ca-1tK"/>
+                                    <constraint firstItem="Yfe-av-TuM" firstAttribute="top" secondItem="VWi-ID-E50" secondAttribute="bottom" id="GuF-xt-Sgr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yfe-av-TuM" secondAttribute="trailing" id="IUR-u3-hF5"/>
+                                    <constraint firstItem="gY2-oA-X71" firstAttribute="leading" secondItem="MT6-74-pZq" secondAttribute="leading" id="Jjm-R4-X6g"/>
+                                    <constraint firstItem="VWi-ID-E50" firstAttribute="top" secondItem="gY2-oA-X71" secondAttribute="bottom" id="P0K-fL-Axy"/>
+                                    <constraint firstAttribute="trailing" secondItem="LXh-ew-8c6" secondAttribute="trailing" id="jwJ-nZ-PRD"/>
+                                    <constraint firstItem="LXh-ew-8c6" firstAttribute="top" secondItem="MT6-74-pZq" secondAttribute="top" id="sIo-ho-EXK"/>
+                                    <constraint firstItem="LXh-ew-8c6" firstAttribute="leading" secondItem="MT6-74-pZq" secondAttribute="leading" id="tPe-AT-2Ha"/>
+                                    <constraint firstAttribute="trailing" secondItem="gY2-oA-X71" secondAttribute="trailing" id="utx-7V-BmG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,11 +186,15 @@
                             <constraint firstItem="8Lc-pS-Nio" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L2y-Y4-IN1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Lc-pS-Nio" secondAttribute="trailing" id="RRq-SS-tkO"/>
                             <constraint firstItem="Sf0-Sg-6zW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jzJ-XH-yGb"/>
+                            <constraint firstItem="MT6-74-pZq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ugh-yZ-ubt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MT6-74-pZq" secondAttribute="trailing" id="ysg-Y7-k8c"/>
                             <constraint firstItem="8Lc-pS-Nio" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zwx-Mx-KpE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="filterEditView" destination="Cub-Ny-Tqf" id="TNa-Fj-cAk"/>
+                        <outlet property="levelButton" destination="n6d-0G-gu0" id="alJ-L5-seW"/>
+                        <outlet property="levelCompoView" destination="MT6-74-pZq" id="AAV-xX-crB"/>
                         <outlet property="logTableView" destination="Sf0-Sg-6zW" id="YQ9-cZ-R3C"/>
                     </connections>
                 </viewController>

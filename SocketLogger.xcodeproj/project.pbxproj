@@ -18,9 +18,10 @@
 		8CAF9E44286AD6CE00EB733E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF9E3D286AD6CE00EB733E /* Result.swift */; };
 		8CAF9E45286AD6CE00EB733E /* UDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF9E3F286AD6CE00EB733E /* UDPClient.swift */; };
 		8CAF9E46286AD6CE00EB733E /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF9E40286AD6CE00EB733E /* Socket.swift */; };
-		8CAF9EA2286AECF900EB733E /* ThatThat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CAF9EA1286AECF900EB733E /* ThatThat.mp3 */; };
 		8CAF9EB6286C1CDC00EB733E /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF9EB5286C1CDC00EB733E /* LogTableViewCell.swift */; };
 		8CAF9EB8286C27CC00EB733E /* LogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CAF9EB7286C27CC00EB733E /* LogTableViewCell.xib */; };
+		8CAF9EBB286D885B00EB733E /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF9EBA286D885A00EB733E /* ColorExtension.swift */; };
+		8CAF9EBE286D978000EB733E /* nonesound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8CAF9EBD286D978000EB733E /* nonesound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,9 +53,10 @@
 		8CAF9E3E286AD6CE00EB733E /* SwiftSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftSocket.h; sourceTree = "<group>"; };
 		8CAF9E3F286AD6CE00EB733E /* UDPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPClient.swift; sourceTree = "<group>"; };
 		8CAF9E40286AD6CE00EB733E /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
-		8CAF9EA1286AECF900EB733E /* ThatThat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ThatThat.mp3; sourceTree = "<group>"; };
 		8CAF9EB5286C1CDC00EB733E /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		8CAF9EB7286C27CC00EB733E /* LogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogTableViewCell.xib; sourceTree = "<group>"; };
+		8CAF9EBA286D885A00EB733E /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		8CAF9EBD286D978000EB733E /* nonesound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nonesound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +89,13 @@
 		8CA92AEE286591B5002E4F1A /* SocketLogger */ = {
 			isa = PBXGroup;
 			children = (
+				8CAF9EB9286D884400EB733E /* Extension */,
 				8CAF9E39286AD6CE00EB733E /* swiftsocket */,
 				8CA92AEF286591B5002E4F1A /* AppDelegate.swift */,
 				8CA92AF3286591B5002E4F1A /* ViewController.swift */,
 				8CAF9EB5286C1CDC00EB733E /* LogTableViewCell.swift */,
 				8CAF9EB7286C27CC00EB733E /* LogTableViewCell.xib */,
-				8CAF9EA1286AECF900EB733E /* ThatThat.mp3 */,
+				8CAF9EBD286D978000EB733E /* nonesound.mp3 */,
 				8CA92AFA286591B7002E4F1A /* LaunchScreen.storyboard */,
 				8CA92AF5286591B5002E4F1A /* Main.storyboard */,
 				8CA92AF8286591B7002E4F1A /* Assets.xcassets */,
@@ -114,6 +117,14 @@
 				8CAF9E40286AD6CE00EB733E /* Socket.swift */,
 			);
 			path = swiftsocket;
+			sourceTree = "<group>";
+		};
+		8CAF9EB9286D884400EB733E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8CAF9EBA286D885A00EB733E /* ColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +191,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CAF9EA2286AECF900EB733E /* ThatThat.mp3 in Resources */,
 				8CAF9EB8286C27CC00EB733E /* LogTableViewCell.xib in Resources */,
 				8CA92AFC286591B7002E4F1A /* LaunchScreen.storyboard in Resources */,
+				8CAF9EBE286D978000EB733E /* nonesound.mp3 in Resources */,
 				8CA92AF9286591B7002E4F1A /* Assets.xcassets in Resources */,
 				8CA92AF7286591B5002E4F1A /* Main.storyboard in Resources */,
 			);
@@ -204,6 +215,7 @@
 				8CAF9EB6286C1CDC00EB733E /* LogTableViewCell.swift in Sources */,
 				8CAF9E46286AD6CE00EB733E /* Socket.swift in Sources */,
 				8CAF9E41286AD6CE00EB733E /* yudpsocket.c in Sources */,
+				8CAF9EBB286D885B00EB733E /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -333,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
