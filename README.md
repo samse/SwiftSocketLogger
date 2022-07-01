@@ -3,6 +3,9 @@ This is socket logger for ios written with Swift.
 
 It's run on background app in audio playing mode and receive log from other client app.
 
+![socketlogger_screenshot](https://user-images.githubusercontent.com/3222919/176802683-ab00f42f-44d3-481a-bdd8-7d51b429f8ba.jpeg)
+
+
 Client program can send a log using below code.
 - Prerequisists : include all files to your project in swiftsocket directory of this Project.
 - files : yudpsocket.c, ytcpsocket.c, TCPClient.swift, Result.swift, SwiftSocket.h, UDPClient.swift, Socket.swift
