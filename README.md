@@ -1,5 +1,5 @@
 # SwiftSocketLogger
-This is socket logger for ios written with Swift.
+This is socket logger for ios written in Swift.
 
 It's run on background app in audio playing mode and receive log from other client app.
 
